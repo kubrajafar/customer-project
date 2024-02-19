@@ -1,0 +1,25 @@
+nav {
+  width: 100%;
+  display: flex;
+  background-color: teal;
+  justify-content: space-between;
+  color: #fff;
+  padding: 10px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  .logo{
+   font-size: 25px;
+   font-weight: bold;
+  }
+  ul{
+   display: flex;
+   gap: 15px;
+   li{
+      font-size: 17px;
+      a.active{
+         text-decoration: underline;
+         color: rgb(238, 157, 7) ;
+      }
+   }
+  }
+}

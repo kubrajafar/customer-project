@@ -1,24 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Header from "./layouts/header";
+import Footer from "./layouts/footer";
+import HomePage from "./pages/home-page";
+import CustomerList from "./pages/customer-list";
+import CustomerDetail from "./pages/customer-detail";
+import AddCustomer from "./pages/add-customer";
+import AddCustomerFormik from "./pages/addCustomer-formik";
+
+import FavoriteCustomer from "./pages/favorite-customer";
+import ErrorPage from "./pages/error-page";
+
+import "./assets/sass/reset.scss";
+import { useState } from "react";
 
 function App() {
+  const [favorites, setFavorites] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/customer-list"
+          element={
+            <CustomerList favorites={favorites} setFavorites={setFavorites} />
+          }
+        />
+        <Route path="/customer-list/:id" element={<CustomerDetail />} />
+        <Route
+          path="/favorite-customer"
+          element={
+            <FavoriteCustomer
+              favorites={favorites}
+              setFavorites={setFavorites}
+            />
+          }
+        />
+        {/* <Route path="/add-customer" element={<AddCustomer />} /> */}
+        <Route path="/add-customer" element={<AddCustomerFormik />} />
+
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+
+      <Footer />
+    </>
   );
 }
 

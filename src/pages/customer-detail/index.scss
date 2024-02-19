@@ -1,0 +1,14 @@
+.detail {
+  padding: 50px;
+  ul {
+    list-style: circle;
+    margin-bottom: 30px;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  .button {
+    display: flex;
+    gap: 20px;
+  }
+}
