@@ -49,7 +49,7 @@ const CustomerList = ({ favorites, setFavorites }) => {
       message: "Added to favorites",
       description: "This is customer added to favorites",
       onClick: () => {
-        console.log("Notification Clicked!");
+       
       },
     });
   };

@@ -14,11 +14,11 @@ const AddCustomer = () => {
       },
     };
     
-    console.log("Success:", customerObj);
+   
     addNewCustomer(customerObj);
   };
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
+ alert(errorInfo)
   };
 
   return (

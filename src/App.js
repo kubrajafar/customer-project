@@ -4,7 +4,6 @@ import Footer from "./layouts/footer";
 import HomePage from "./pages/home-page";
 import CustomerList from "./pages/customer-list";
 import CustomerDetail from "./pages/customer-detail";
-import AddCustomer from "./pages/add-customer";
 import AddCustomerFormik from "./pages/addCustomer-formik";
 
 import FavoriteCustomer from "./pages/favorite-customer";

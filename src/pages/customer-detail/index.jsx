@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getCustomerById } from "../../services/customers.service";
 import { Button } from "antd";
@@ -14,9 +14,9 @@ const CustomerDetail = () => {
     setCustomers(await getCustomerById(params.id));
   };
 
-  useEffect(() => {
+
     getData();
-  }, []);
+
 
   return (
     <div className="detail">
